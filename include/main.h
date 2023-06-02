@@ -33,21 +33,6 @@
 #define LCD_BLUE 0x001F
 #define LCD_BLACK 0x0000
 
-// enum for player color
-typedef enum {
-    PLAYER_RED,
-    PLAYER_GREEN,
-    PLAYER_BLUE,
-    NO_COLOR
-} player_color_t;
-
-// enum for player direction
-typedef enum {
-    MOVE_LEFT,
-    MOVE_RIGHT,
-    MOVE_CENTER,
-    NO_DIRECTION
-} move_direction_t;
 
 // enum for obstacle type
 typedef enum {
