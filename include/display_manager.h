@@ -5,9 +5,25 @@
  *      Author: jacqu
  */
 
-#ifndef INCLUDE_DISPLAY_MANAGER_H_
-#define INCLUDE_DISPLAY_MANAGER_H_
+#pragma once
+
+class Display {
+public:
+
+    Display();
+    QueueHandle_t getQueueScreenPlayer();
+    QueueHandle_t getQueueScreenObstacles();
+
+    // TODO: Potentially make a function that accesses the Queues
 
 
+private:
 
-#endif /* INCLUDE_DISPLAY_MANAGER_H_ */
+    void taskScreenRedraw(void *pvParameters);
+    bool detectCollision(uint16_t playerX, uint16_t playerY, uint16_t obstacleX, uint16_t obstacleY);
+
+    // handles
+    TaskHandle_t Task_Screen_Redraw_Handle;
+    QueueHandle_t Queue_Screen_Player;
+    QueueHandle_t Queue_Screen_Obstacles;
+};
