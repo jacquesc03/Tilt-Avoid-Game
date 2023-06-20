@@ -5,7 +5,7 @@
  *      Author: saculgrad
  */
 
-#include "i2c.h"
+#include "../include/i2c.h"
 
 
 
